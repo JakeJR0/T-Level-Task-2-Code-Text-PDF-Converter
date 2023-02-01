@@ -36,12 +36,9 @@ def rename_pdf_files(prefix="", suffix=""):
         language = file_name.split("_")[-1]
         language_length = len(language)
         language = file_name[-language_length:]
-        print(language)
         file_name = file_name[:-language_length]
-        print(file_name)
 
         file_name = f"{file_name[:-1]}.{language}"
-        print("Output: ", file_name)
         new_file_name = f"{prefix}{file_name}_{suffix}.{extension}"
         new_file_name = os.path.join("./PDF", new_file_name)
         os.rename(file, new_file_name)
