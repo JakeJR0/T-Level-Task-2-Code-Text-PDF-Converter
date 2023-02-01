@@ -1,5 +1,6 @@
 from code_text import code_to_text, rename_text_files
 from text_pdf import convert_files_text_to_pdf, rename_pdf_files
+from zipper import zipOutput
 
 
 def rename_files():
@@ -26,6 +27,7 @@ def rename_files():
     rename_text_files(prefix, suffix)
     rename_pdf_files(prefix, suffix)
     print("Exported files are in the PDF folder and TEXT folder.")
+    zipOutput(prefix, suffix)
 
 
 if __name__ == "__main__":
