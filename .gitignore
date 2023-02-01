@@ -1,5 +1,6 @@
 /TEXT/*
 /CODE/*
 /PDF/*
+/OUTPUT/*
 /venv/*
 __pycache__/*
