@@ -4,20 +4,27 @@ from zipper import zipOutput
 
 
 def rename_files():
-    task_name = "Task_2"
     while True:
-        registration_number = input("Enter your registration number: ")
+        task_name = input("\nEnter your task name: ")
+
+        if len(task_name) > 0 and len(task_name) < 20:
+            break
+
+    task_name = task_name.replace(" ", "_")
+
+    while True:
+        registration_number = input("\nEnter your registration number: ")
         if len(registration_number) > 5 and len(registration_number) < 10:
             break
 
     while True:
-        first_name = input("Enter your first name: ")
+        first_name = input("\nEnter your first name: ")
 
         if len(first_name) > 0 and len(first_name) < 20:
             break
 
     while True:
-        last_name = input("Enter your last name: ")
+        last_name = input("\nEnter your last name: ")
         if len(last_name) > 0 and len(last_name) < 30:
             break
 
@@ -26,8 +33,10 @@ def rename_files():
 
     rename_text_files(prefix, suffix)
     rename_pdf_files(prefix, suffix)
-    print("Exported files are in the PDF folder and TEXT folder.")
     zipOutput(prefix, suffix)
+    print(
+        "\nExported files are in the PDF folder and TEXT folder and a zip file in the OUTPUT folder."
+    )
 
 
 if __name__ == "__main__":
