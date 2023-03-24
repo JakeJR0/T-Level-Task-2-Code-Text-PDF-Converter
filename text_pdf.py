@@ -87,7 +87,7 @@ def convert_files_text_to_pdf():
             pdf.cell(200, 10, txt="", ln=1, align="C")
 
             for x in f:
-                pdf.cell(50, 10, txt=x, ln=2)
+                pdf.multi_cell(w=0, h=6, txt=x)
 
         # Removes path
         new_file = file.split("\\")[-1]
