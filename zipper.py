@@ -20,7 +20,7 @@ def get_files(directory=""):
 
 
 def zipOutput(prefix="", suffix=""):
-    output_file_name = f"{prefix}_Code_{suffix}"
+    output_file_name = f"{prefix}_CodeExport_{suffix}"
     if os.path.exists(f"./OUTPUT/{output_file_name}.zip"):
         os.remove(f"./OUTPUT/{output_file_name}.zip")
 
