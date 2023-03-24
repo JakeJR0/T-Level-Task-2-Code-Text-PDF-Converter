@@ -14,7 +14,7 @@ def rename_files():
 
     while True:
         registration_number = input("\nEnter your registration number: ")
-        if len(registration_number) > 5 and len(registration_number) < 10:
+        if len(registration_number) > 5 and len(registration_number) < 20:
             break
 
     while True:
